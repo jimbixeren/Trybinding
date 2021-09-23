@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Local="clr-namespace:Trybinding"
+             x:Class="Trybinding.MainPage"
+             xmlns:m="clr-namespace:Trybinding.Model" >
+
+
+  
+
+
+
+
+    <ContentPage.BindingContext>
+        <Local:MyBindingObject/>
+
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked_Add"></ToolbarItem>
+        <ToolbarItem Text="Bet Match" Clicked="ToolbarItem_Clicked_Betmatch"></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout>
+
+        <ListView Margin="5,5,5,5" Header="{Binding}" Footer="{Binding}">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Label Text="{Binding HeaderModel}" FontSize="30" BackgroundColor="Red" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                    </Grid>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <ContentView BackgroundColor="Aquamarine">
+                        <Label Margin="10" Text="{Binding  FooterModel }" FontSize="30" TextColor="Blue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </ContentView>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+
+        </ListView>
+
+
+        <Label Text="{Binding Description}" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="{Binding  SomeNumbers}" FontSize="Title" Padding="30,10,30,10"/>
+        <Entry Text="{Binding SomeNumbers, Mode=TwoWay}"/>
+        <Label Text="{Binding  SomeDouble, StringFormat='{0:0.0}'}" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="{Binding  ImagUrl,TargetNullValue=''}" FontSize="Title" Padding="30,10,30,10"/>
+
+      
+
+
+
+
+    </StackLayout>
+
+</ContentPage>

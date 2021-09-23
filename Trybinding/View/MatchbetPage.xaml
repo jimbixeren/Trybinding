@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:trybinding="clr-namespace:Trybinding" x:DataType="trybinding:MyBindingObject"
+             x:Class="Trybinding.View.MatchbetPage"
+             xmlns:m="clr-namespace:Trybinding.Model">
+
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!--<Entry x:Name="save" Placeholder="Enter a team"></Entry>-->
+            <!--<Entry x:Name="save" Placeholder="{Binding Enterteams}"></Entry>-->
+
+            <Button Text="save" Clicked="Button_Clicked"></Button>
+
+            <!--<Entry Text="{Binding Headersave}"/>-->
+
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
